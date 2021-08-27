@@ -15,7 +15,9 @@ public class UnlimitedJCEChecker {
             int maxKeyLen = Cipher.getMaxAllowedKeyLength(algorithm);
             String msg = (maxKeyLen > 128) ? "Yes: UnlimitedJCE available." : "No: UnlimitedJCE not available." ;
             NumberFormat nf = NumberFormat.getInstance() ;
+	    System.out.println("\n\n\n") ;
             System.out.println( msg + " {" + algorithm + "} Max KeyLength: [" + nf.format(maxKeyLen) + "]");
+	    System.out.println("\n\n\n") ;
         } catch (Exception e){
           throw new RuntimeException("Exception in finding maxLength for algorithm {" + algorithm + "}" , e) ;
         }
