@@ -1,0 +1,3 @@
+#!/bin/bash
+set -x
+echo 'System.out.println("Is JCE Installed ? " + (javax.crypto.Cipher.getMaxAllowedKeyLength("AES") > 128)) ;' |  jshell -
